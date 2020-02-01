@@ -12,6 +12,38 @@
 
     <title>Weather App</title>
 </head>
+<body>
+    <nav class="navbar navbar-expand-xs navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Weather Dashboard</a>
+
+        <div class="navbar" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="City" aria-label="Search"
+                    id="cityInput">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="search">Get Weather</button>
+            </form>
+
+        </div>
+    </nav>
+
+    <!-- Current Weather -->
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Title -->
+                    <h5 class="card-title" id="current-weather-title">Current Weather</h5>
+                    <!-- Content -->
+                    <p id="currenttemp">Temperature: </p>
+                    <p id="currenthum">Humidity: </p>
+                    <p id="currentwind">Wind Speed: </p>
+                    <p id="currentUV">UV Index: </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>   
