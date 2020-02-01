@@ -17,11 +17,12 @@ function weatherAjax(city) {
             method: "GET"
       }).then(function (response) {
             console.log(response);
-            
+            uvAjax(response.coord.lat, response.coord.lon);
+
             dispCurrentCity.text(`Current Weather | ${response.name}`)
-        dispCurrentTemp.text(`Temperature: ${response.main.temp}°F`)
-        dispCurrentHum.text(`Humidity: ${response.main.humidity}%`)
-        dispCurrentWind.text(`Wind Speed: ${response.wind.speed} MPH`) 
+            dispCurrentTemp.text(`Temperature: ${response.main.temp}°F`)
+            dispCurrentHum.text(`Humidity: ${response.main.humidity}%`)
+            dispCurrentWind.text(`Wind Speed: ${response.wind.speed} MPH`)
       });
 };
 // forecast ajax call
@@ -41,7 +42,17 @@ $("#search").on('click', function () {
 
 });
 
+function uvAjax(lat, lon) {
+      let latlon = `&lat=${lat}&lon=${lon}`
+      $.ajax({
+            url: uvIndexURL + latlon,
+            method: "GET"
+      }).then(function (UVresponse) {
+            console.log('UV response', UVresponse);
+            dispCurrentUV.text(`UV Index: ${UVresponse.value}`);
+      });
 
+};
 
 
 
