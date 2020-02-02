@@ -119,5 +119,5 @@ function storeCity(city) {
       var currentCity = $('<li>').text(city);
       currentCity.attr({ type: 'button', class: 'storeCity', name: city });
       $('#cities').append(currentCity);
-      localStorage.setItem('city', city);
+      localStorage.setItem(city, city);
   };
