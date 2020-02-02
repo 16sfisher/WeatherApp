@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -12,40 +13,136 @@
 
     <title>Weather App</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-xs navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Weather Dashboard</a>
+    <div class="container">
 
-        <div class="navbar" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="City" aria-label="Search"
-                    id="cityInput">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="search">Get Weather</button>
-            </form>
+        <!-- Nav Bar -->
 
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-xs navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Weather Dashboard</a>
 
-    <!-- Current Weather -->
-    <div class="row">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-body">
-                    <!-- Title -->
-                    <h5 class="card-title" id="current-weather-title">Current Weather</h5>
-                    <!-- Content -->
-                    <p id="currenttemp">Temperature: </p>
-                    <p id="currenthum">Humidity: </p>
-                    <p id="currentwind">Wind Speed: </p>
-                    <p id="currentUV">UV Index: </p>
+            <div class="navbar" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="City" aria-label="Search"
+                        id="cityInput">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="search">Get Weather</button>
+                </form>
 
+            </div>
+        </nav>
+        <!-- Current Weather -->
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title" id="current-weather-title">Current Weather</h5>
+                        <!-- Content -->
+                        <p id="currenttemp">Temperature: </p>
+                        <p id="currenthum">Humidity: </p>
+                        <p id="currentwind">Wind Speed: </p>
+                        <p id="currentUV">UV Index: </p>
+                        <p id="currentIcon"></p>
+
+                    </div>
                 </div>
             </div>
+
         </div>
+        <div class="row"></div>
+
+        <!-- Search History - Fill Dynamically -->
+        <div class="row">
+            <div class=".col-md-3 no-float">
+                <nav class="flex-column">
+                    <!-- Search History -->
+                    <p id="cities"></p>
+
+
+                </nav>
+            </div>
+            <!-- cards go here -->
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title date" id='date1'> Date: </h5>
+                        <!-- Content -->
+                        <img class="icon" id="icon1">
+                        <p class="forecasttemp" id='forecastTemp1'>Temperature : </p>
+                        <p class="forecasthum" id='forecastHum1'>Humidity: </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title date" id='date2'> Date: </h5>
+                        <!-- Content -->
+                        <img class="icon" id="icon2">
+                        <p class="forecasttemp" id='forecastTemp2'>Temperature : </p>
+                        <p class="forecasthum" id='forecastHum2'>Humidity: </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title date" id='date3'> Date: </h5>
+                        <!-- Content -->
+                        <img class="icon" id="icon3">
+                        <p class="forecasttemp" id='forecastTemp3'>Temperature : </p>
+                        <p class="forecasthum" id='forecastHum3'>Humidity: </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title date" id='date4'> Date: </h5>
+                        <!-- Content -->
+                        <img class="icon" id="icon4">
+                        <p class="forecasttemp" id='forecastTemp4'>Temperature : </p>
+                        <p class="forecasthum" id='forecastHum4'>Humidity: </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title date" id='date5'> Date: </h5>
+                        <!-- Content -->
+                        <img class="icon" id="icon5">
+                        <p class="forecasttemp" id='forecastTemp5'>Temperature : </p>
+                        <p class="forecasthum" id='forecastHum5'>Humidity: </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
 
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://momentjs.com/downloads/moment.js'></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
